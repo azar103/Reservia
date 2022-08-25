@@ -1,0 +1,391 @@
+/*Common Styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    
+}
+
+:root{
+    --primary-color: #0065fc;
+    --secondary-color: #DEEBFF;
+    --gray-color: #F2F2F2;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.section-padding {
+    padding: 20px 0;
+}
+.icon-star{
+    color: var(--primary-color)
+}
+/*Header*/
+header{
+    padding: 5px 0;
+}
+.header_link {
+    color: var(--primary-color);
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.logo {
+    width: 100px;
+    height: 50px;
+}
+.header_content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    border-bottom: 2px solid var(--gray-color);
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+
+header > nav ul li:hover {
+    border-bottom: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
+header > nav ul li:hover a {
+    color: var(--primary-color);
+}
+
+/*introduction*/
+.introduction {
+    padding:  30px 0;
+}
+
+.hebergement h1::first-letter {
+    text-transform: uppercase;
+}
+
+.hebergement p {
+    margin-top: 15px;
+}
+.hebergement p::first-letter {
+    text-transform: capitalize;
+}
+
+input[type="search"] {
+    text-align: center;
+}
+
+.search {
+
+    margin: 20px 0;
+    background: var(--gray-color);
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+}
+.search input[type="search"] {
+    padding: 10px 0 10px 8px;
+    flex: 2;
+    border: var(--gray-color);
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.search .icon {
+   
+    padding: 15px;
+}
+
+
+.search_btn {
+   padding: 15px;
+   background: var(--primary-color);
+   color: white;
+   border-radius: 10px;
+   position: absolute;
+   right: 5px;
+}
+
+/*Filtres*/
+.filtres {
+
+}
+.filtres h2{
+   text-transform: capitalize;
+   margin-bottom: 10px;
+}
+
+.filtres-items {
+    display: grid;
+    grid-template-areas: "f1 f2"
+    "f3 f3"
+    "f4 f4"
+    ;
+    gap: 10px;
+}
+.filtre-item {
+    border-radius: 5%;
+    border: 1px solid var(--gray-color);
+    padding: 10px 8px 10px 60px;
+    font-weight: bold;
+    text-transform: capitalize;
+   
+    border-radius: 20px;
+
+    
+}
+
+.filtre-item-economique,  .filtre-item-familial, 
+.filtre-item-romantique,.filtre-item-animaux {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.filtre-item:hover {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background .5s;
+}
+.filtre-item-economique > .filtre-item-icon,
+.filtre-item-familial > .filtre-item-icon,
+.filtre-item-romantique > .filtre-item-icon,
+.filtre-item-animaux > .filtre-item-icon
+{
+    position: absolute;
+    left: 0;
+
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtre-item-economique {
+    grid-area: f1;
+}
+.filtre-item-familial{
+    grid-area: f2;
+}
+.filtre-item-romantique{
+    grid-area: f3;
+}
+
+.filtre-item-romantique{grid-area: f4;
+width: 70%;
+}
+.info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.info > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray-color);
+    padding: 10px;
+    color: var(--primary-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/*popularity*/
+.popularity{
+  background: var(--gray-color);
+}
+.popularity-top {
+    margin-bottom: 40px;
+}
+.popularity-item {
+    padding-left: 120px;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.item-scaled:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform .5s;
+}
+.popularity-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popularity-item-info{
+    padding: 12px;
+
+    
+}
+.popularity-item-info h3{
+    font-weight: bold;
+}
+.popularity-item-info h3::first-letter{
+    text-transform: capitalize;
+}
+.popularity-top h2::first-letter{
+    text-transform: capitalize;
+}
+.popularity-item-info p {
+    margin-bottom: 20px;
+}
+
+
+
+.popularity-item img {
+
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 100px;
+    
+    height: 98%;
+    object-fit: cover;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+}
+
+.popularity-item-image img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/*Hebergements*/
+.hebergements{
+    background: var(--gray-color);
+    margin: 5px 0;
+}
+
+
+.hebergements-content h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hebergements-content h2::first-letter {
+    text-transform: capitalize;
+}
+.hebergement-item {
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.hebergement-item img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 15px 15px 0px 0px;
+}
+.hebergement-item-desc {
+    padding: 20px;
+}
+
+.hebergement-item-desc p {
+    margin: 5px 0;
+}
+
+.hebergement-item-desc i:last-child {
+    color: var(--gray-color)
+}
+.display_plus{
+    text-transform: capitalize;
+}
+
+/*activites*/
+.activity-item {
+    border-radius: 13px;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    pad: 4px;
+    margin: 15px 0;
+}
+.activity-item img{
+    border-radius: 13px;
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    padding: 5px;
+    
+}
+
+.activity-item-info h3{
+    font-weight: bold;
+}
+
+.activity-item-info{
+    padding: 15px;
+
+
+}
+
+.activity-item-info h3{
+    text-transform: capitalize;
+}
+
+/*footer*/
+footer {
+    background: var(--gray-color);
+}
+
+.contact-item {
+    margin: 15px 0;
+}
+
+.contact-item h4::first-letter,
+.contact-item ul li::first-letter
+{
+    text-transform: capitalize;
+}
+
+.contact-item h4 {
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.contact-item ul li {
+    margin-bottom: 5px;
+}
